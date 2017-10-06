@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+	<title>Student Details</title>
+</h:head>
+
+<h:body>
+	<h:form>
+      First Name: <h:inputText value="#{hello.firstName}"
+			p:placeholder="Enter your name" />
+		<br />
+		<br />
+      Surname: <h:inputText value="#{hello.surname}"
+			p:placeholder="Enter your Surname" />
+		<br />
+		<br />
+      Address: <h:inputTextarea value="#{hello.address}"
+			p:placeholder="Enter your address" />
+		<br />
+		<br />
+		Country: <h:selectOneMenu value="#{hello.country}">
+			<f:selectItem itemValue="IRL" itemLabel="Ireland" />
+			<f:selectItem itemValue="UK" itemLabel="United Kingdom" />
+			<f:selectItem itemValue="FRA" itemLabel="France" />
+			<f:selectItem itemValue="GER" itemLabel="Germany" />
+			<f:selectItem itemValue="SPA" itemLabel="Spain" />
+			<f:selectItem itemValue="USA" itemLabel="United States of America" />
+			<f:selectItem itemValue="OTH" itemLabel="Other..." />
+		</h:selectOneMenu>
+		<br />
+		<br />
+		Course: <h:selectOneMenu value="#{hello.course}">
+			<f:selectItem itemValue="BSC" itemLabel="B.Sc. in Computing and Software Development" />
+			<f:selectItem itemValue="BSCHONS" itemLabel="B.Sc. (Hons) in Computing and Software Development" />
+		</h:selectOneMenu>
+		<br />
+		<br />
+      Phone number: <h:inputText value="#{hello.phone}"
+			p:placeholder="Enter contact number" />
+		<br />
+		<br />
+      Age: <h:inputText value="#{hello.age}"
+			p:placeholder="Enter your age" />
+		<br />
+		<br />
+      Sex: <h:selectOneRadio value="#{hello.sex}">
+			<f:selectItem itemValue="Male" itemLabel="Male" />
+			<f:selectItem itemValue="Female" itemLabel="Female" />
+		</h:selectOneRadio>
+
+		<h:commandButton value="OK" action="helloOutput" />
+		<h:commandButton value="Cancel" action="cancel" />
+
+	</h:form>
+</h:body>
+</html>
